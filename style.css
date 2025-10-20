@@ -1,0 +1,361 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #287D76;
+    color: #f4f4f4;
+}
+
+.page-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+.container-main {
+    display: flex;
+    max-width: 900px;
+    width: 90%;
+    background-color:#04534F;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.container-img, .container-form {
+    flex-basis: 50%;
+    padding: 40px;
+}
+
+.container-img {
+    color: white;
+    background-image: url('assets/medico.jpg');
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center; 
+}
+
+.container-form h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    text-align: center;
+}
+.container-form p {
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: #ccc;
+}
+
+.container-form h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px; 
+}
+
+.container-form label, .cadastro label {
+    display: block;
+    margin-bottom: 8px; 
+    font-size: 16px; 
+    color: #ffffff; 
+}
+
+.container-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+.container-form button, .cadastro button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #287D76;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container-form button:hover, .cadastro button:hover {
+    background-color: #36968e;
+}
+
+.painel-inicial {
+    background-color: rgba(0, 0, 0, 0.3); 
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px); /* Efeito de vidro fosco */
+}
+
+.painel-inicial h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.painel-inicial p {
+    font-size: 16px;
+}
+
+#mensagem-erro {
+    color: #ff6b6b; 
+    background-color: rgba(255, 107, 107, 0.1);
+    border: 1px solid #ff6b6b;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}
+
+.container-form a {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.container-agendamento {
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cadastro {
+    width: 100%;
+    max-width: 700px; 
+    background-color: #04534F;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #f4f4f4;
+}
+
+.cadastro h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cadastro input:not([type="radio"]):not([type="checkbox"]), .cadastro select, .cadastro textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+.cadastro textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.container-form input:focus, .cadastro input:not([type="radio"]):not([type="checkbox"]):focus, .cadastro select:focus, .cadastro textarea:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px rgba(40, 125, 118, 0.5);
+}
+
+.input-group-radio, .input-group-check {
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group-radio legend, .input-group-check legend {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.input-group-radio div, .input-group-check div {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.input-group-radio input, .input-group-check input {
+    margin-right: 10px;
+}
+
+.input-group-radio label, .input-group-check label {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #f4f4f4;
+}
+
+.page-lista, .page-agendamento {
+    padding: 0; 
+}
+
+/* Estilo do Cabeçalho */
+.header-app {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 15px 40px;
+}
+
+.header-app h2 {
+    color: #f4f4f4;
+}
+
+.header-app nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-button {
+    text-decoration: none;
+    background-color: #04534F;
+    color: #f4f4f4;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #0b635d;
+}
+
+.nav-button.logout {
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+}
+
+.nav-button.logout:hover {
+    background-color: #e05252;
+}
+
+/* Estilo do Container da Lista */
+.container-lista {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #04534F;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.container-lista h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #287D76;
+    padding-bottom: 15px;
+}
+
+/* Estilo dos Cards de Agendamento */
+#lista-agendamentos-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna por padrão */
+    gap: 20px;
+}
+
+.agendamento-card {
+    background-color: #287D76;
+    border: 1px solid #0b635d;
+    border-left: 5px solid #f2f2f2;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.agendamento-card h3 {
+    color: #f4f4f4;
+    font-size: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para a data e hora */
+.agendamento-card h3 span {
+    font-size: 16px;
+    font-weight: normal;
+    color: #f2f2f2;
+    background-color: #0b635d;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.agendamento-card p {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.agendamento-card p strong {
+    color: #f2f2f2;
+    margin-right: 5px;
+    min-width: 100px;
+    display: inline-block;
+}
+
+/* Estilo dos botões de Ação */
+.card-botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #0b635d;
+    padding-top: 15px;
+}
+
+.btn-card {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Botão de Editar */
+.btn-edit {
+    background-color: #04534F;
+    color: white;
+}
+.btn-edit:hover {
+    background-color: #36968e;
+}
+
+/* Botão de Excluir */
+.btn-delete {
+    background-color: #ef4444;
+    color: white;
+}
+.btn-delete:hover {
+    background-color: #dc2626;
+}

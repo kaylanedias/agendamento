@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Agendamento</title>
+</head>
+
+<body class="page-agendamento">
+    <header class="header-app">
+        <h2>MedHub</h2>
+        <nav>
+            <a href="lista.html" class="nav-button"> Agendamentos
+            </a>
+            <button id="btn-logout" class="nav-button logout"> Sair
+            </button>
+        </nav>
+    </header>
+
+    <main class="container-agendamento">
+        <div class="cadastro">
+            <h1>Cadastro de Agendamento</h1>
+            
+            <form action="" id="formCadastro">
+
+                <input type="hidden" id="edit-id">
+
+                <div class="input-group">
+                    <label for="nome">Nome do Paciente</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Insira o Nome Completo">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Informe um E-mail válido">
+                </div>
+
+                <div class="input-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Ex: (xx) xxxxx-xxxx">
+                </div>
+
+                <div class="input-group">
+                    <label for="idade">Idade</label>
+                    <input type="number" id="idade" name="idade" min="0" max="120" placeholder="A Idade deve ser entre 1 e 120 anos">
+                </div>
+
+                <div class="input-group">
+                    <label for="data">Data da consulta</label>
+                    <input type="date" id="data" name="data">
+                </div>
+
+                <div class="input-group">
+                    <label for="hora">Horário</label>
+                    <input type="time" id="hora" name="hora">
+                </div>
+
+                <div class="input-group">
+                    <label for="especialidade">Especialidade</label>
+                    <select id="especialidade" name="especialidade">
+                        <option value="padrao">-</option>
+                        <option value="clinica-geral">Clínica Geral</option>
+                        <option value="pediatria">Pediatria</option>
+                        <option value="dermatologia">Dermatologia</option>
+                        <option value="odontologia">Odontologia</option>
+                        <option value="cardiologia">Cardiologia</option>
+                    </select>
+                </div>
+
+                <fieldset class="input-group-radio">
+                    <legend>Conveniado?</legend>
+                    <div>
+                        <input type="radio" id="conveniado-sim" name="conveniado" value="sim">
+                        <label for="conveniado-sim">Sim</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="conveniado-nao" name="conveniado" value="nao" checked>
+                        <label for="conveniado-nao">Não</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="input-group-check">
+                    <legend>Serviços Adicionais</legend>
+                    <div>
+                        <input type="checkbox" id="servico-retorno" name="servico" value="retorno">
+                        <label for="servico-retorno">Retorno</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="servico-exames" name="servico" value="exames">
+                        <label for="servico-exames">Exames</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="servico-teleconsulta" name="servico" value="teleconsulta">
+                        <label for="servico-teleconsulta">Teleconsulta</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="servico-receita-medica" name="servico" value="receitaMedica">
+                        <label for="servico-receita-medica">Receita Médica</label>
+                    </div>
+                </fieldset>
+
+                <div class="input-group">
+                    <label for="sintomas">Sintomas Relatados</label>
+                    <textarea name="sintomas" id="sintomas" rows="4"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="medico">Médico Responsável</label>
+                    <select name="medico" id="medico">
+                        <option value="padrao">-</option>
+                        <option value="medico1">Dr. Silva</option>
+                        <option value="medico2">Dra. Ana</option>
+                        <option value="medico3">Dr. João</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="btnSalvar">Salvar Agendamento</button>
+            
+            </form>
+            
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>

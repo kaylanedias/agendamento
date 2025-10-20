@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Agendamentos</title>
+</head>
+<body class="page-lista">
+
+    <header class="header-app">
+        <h2>MedHub</h2>
+        <nav>
+            <a href="agendamento.html" class="nav-button"> Novo Agendamento
+            </a>
+            <button id="btn-logout" class="nav-button logout"> Sair
+            </button>
+        </nav>
+    </header>
+
+    <main class="container-lista">
+        <h1><i class="fas fa-calendar-alt"></i> Lista de Agendamentos</h1>
+        
+        <p id="sem-agendamentos" style="display: none; text-align: center; padding: 20px;">
+            Nenhum agendamento encontrado.
+        </p>
+
+        <div id="lista-agendamentos-container">
+            </div>
+
+    </main>
+    
+    <script src="main.js"></script>
+</body>
+</html>
